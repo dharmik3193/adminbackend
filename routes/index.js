@@ -21,7 +21,7 @@ router.get('/get_student', async (req, res) => {
 
 router.get('/get_student/:id', async (req, res) => {
   var data = await admissionmodel.findById(req.params.id);
-  var course = await coursemodel.findOne({course_name:data.course})
+  var course = await coursemodel.findOne({course_name:data.course});
 
   var data = {
 
